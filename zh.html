@@ -13,6 +13,10 @@
 .vid { margin: 14px 0 6px; }
 .vid video { width: 100%; border-radius: 10px; background: #000; display: block; }
 .vid a.btn { display: inline-block; margin-top: 8px; padding: 8px 14px; border-radius: 8px; background: var(--brand); color: var(--on-brand); text-decoration: none; font-weight: 500; font-size: 0.92rem; }
+.qcl { counter-reset: q; list-style: none; padding: 0; margin: 10px 0; display: grid; gap: 8px; }
+.qcl li { counter-increment: q; display: grid; grid-template-columns: 30px 1fr; gap: 8px; font-size: 0.93rem; }
+.qcl li::before { content: counter(q); font-family: var(--font-mono); color: var(--ap); font-weight: 500; font-size: 1.05rem; }
+.src { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
 </style></head><body>
 <title>新竹前後貼片 DSED</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -340,10 +344,38 @@ footer { font-size: 0.8rem; color: var(--muted); text-align: center; }
     <div class="vid">
       <video controls playsinline preload="none" poster="media/ap-dsed-training.jpg" src="media/ap-dsed-training.mp4"></video>
       <a class="btn" href="media/ap-dsed-training.mp4" target="_blank" rel="noopener">▶ 開啟教學影片（2:33）</a>
-      <p class="small">新竹縣政府消防局前後貼片及 DSED 教學影片。</p>
+      <p class="small">前後貼片及 DSED 教學影片。</p>
+      <p class="src">來源：新竹縣政府消防局。© 新竹縣政府消防局 版權所有。</p>
     </div>
     <div class="note"><span class="eyebrow">講者說明</span>
       <p>公文改變不了手上的動作。RCDP 在錯誤發生的當下就喊停，錯的順序不會再被重複練習。這是我們能在幾個月內，讓 344 人改掉舊習慣的關鍵。</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="qc">
+    <span class="eyebrow">品質管理</span>
+    <h2 id="qc">影像品管</h2>
+    <p>每一件 OHCA 出勤都以密錄器影像逐案檢視，對照訓練的標準流程評分。示範影片呈現品管要求的五項團隊行為：</p>
+    <ol class="qcl">
+      <li><span><b>事前任務分配</b>：出勤途中先分好工。</span></li>
+      <li><span><b>現場再度分配</b>：到場看到實際狀況後調整。</span></li>
+      <li><span><b>BLS 時依序提醒同仁</b>下一步任務。</span></li>
+      <li><span><b>MCPR 架設後的任務調整</b>（脈搏檢查、呼吸道、IV/IO、給藥）。</span></li>
+      <li><span><b>確認任務進度及離開時間</b>，再離開現場。</span></li>
+    </ol>
+    <ul class="list">
+      <li>每案以 100 分為基準，依缺失項目逐項扣分，並附具體建議。</li>
+      <li>未達標準者個別回饋，並以 RCDP 針對缺失補強。</li>
+      <li>每次執行 DSED 後 24 小時內完成裝置檢測與個案回顧。</li>
+    </ul>
+    <div class="vid">
+      <video controls playsinline preload="none" poster="media/qc-team-demo.jpg" src="media/qc-team-demo.mp4"></video>
+      <a class="btn" href="media/qc-team-demo.mp4" target="_blank" rel="noopener">▶ 開啟品管指標示範影片（4:19）</a>
+      <p class="small">影片中的口白內容僅為示範，請依據實際狀況提醒。</p>
+      <p class="src">來源：新竹縣政府消防局。© 新竹縣政府消防局 版權所有。</p>
+    </div>
+    <div class="note"><span class="eyebrow">講者說明</span>
+      <p>訓練訂出標準，影像品管確認它在真實出勤中確實發生。品管中發現的特定錯誤，就成為下一次 RCDP 補強訓練的重點。</p>
     </div>
   </section>
 
@@ -423,7 +455,7 @@ footer { font-size: 0.8rem; color: var(--muted); text-align: center; }
     <div class="row"><span class="k">Email</span><a class="val" href="mailto:davie71722@gmail.com" id="emailVal">davie71722@gmail.com</a><button class="copy" type="button" data-copy="davie71722@gmail.com" id="copyEmail">複製</button></div>
   </section>
 
-  <footer>本頁為中文海報的說明網頁。資料期間：2026 年 1 月 1 日至 9 月 28 日（另含 2025 年 11 月先導個案）。</footer>
+  <footer>教學與品管影片：© 新竹縣政府消防局 版權所有。本頁為中文海報的說明網頁。資料期間：2026 年 1 月 1 日至 9 月 28 日（另含 2025 年 11 月先導個案）。</footer>
 </main>
 
 <script>

@@ -13,6 +13,10 @@
 .vid { margin: 14px 0 6px; }
 .vid video { width: 100%; border-radius: 10px; background: #000; display: block; }
 .vid a.btn { display: inline-block; margin-top: 8px; padding: 8px 14px; border-radius: 8px; background: var(--brand); color: var(--on-brand); text-decoration: none; font-weight: 500; font-size: 0.92rem; }
+.qcl { counter-reset: q; list-style: none; padding: 0; margin: 10px 0; display: grid; gap: 8px; }
+.qcl li { counter-increment: q; display: grid; grid-template-columns: 30px 1fr; gap: 8px; font-size: 0.93rem; }
+.qcl li::before { content: counter(q); font-family: var(--font-mono); color: var(--ap); font-weight: 500; font-size: 1.05rem; }
+.src { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
 </style></head><body>
 <title>Hsinchu AP-First DSED</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -338,10 +342,38 @@ footer { font-size: 0.8rem; color: var(--muted); text-align: center; }
     <div class="vid">
       <video controls playsinline preload="none" poster="media/ap-dsed-training.jpg" src="media/ap-dsed-training.mp4"></video>
       <a class="btn" href="media/ap-dsed-training.mp4" target="_blank" rel="noopener">▶ Open training video (2:33, in Chinese)</a>
-      <p class="small">Hsinchu County Fire Bureau teaching video: AP pads and DSED.</p>
+      <p class="small">Teaching video: AP pads and DSED.</p>
+      <p class="src">Source: Hsinchu County Government Fire Bureau. © Hsinchu County Government Fire Bureau. All rights reserved.</p>
     </div>
     <div class="note"><span class="eyebrow">Presenter's note</span>
       <p>A memo does not change hand movements. RCDP stops the error the moment it happens, so the wrong sequence is never rehearsed again. That is what let us change an old habit across 344 people in a few months.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="qc">
+    <span class="eyebrow">Quality control</span>
+    <h2 id="qc">Video-based quality review</h2>
+    <p>Every OHCA run is reviewed from body-worn camera video and scored against the trained workflow. The demonstration video shows the five team behaviors the review looks for:</p>
+    <ol class="qcl">
+      <li><span><b>Assign tasks before arrival</b>, on the way to the scene.</span></li>
+      <li><span><b>Re-assign on scene</b> once the crew sees the real situation.</span></li>
+      <li><span><b>During BLS, prompt each member in turn</b> on their next task.</span></li>
+      <li><span><b>Adjust tasks after mCPR is on</b> (pulse check, airway, IV/IO, drugs).</span></li>
+      <li><span><b>Confirm task progress and departure time</b> before leaving the scene.</span></li>
+    </ol>
+    <ul class="list">
+      <li>Each case is scored out of 100, with deductions per missed item and written feedback.</li>
+      <li>Crews below the standard receive individual feedback and focused retraining (RCDP).</li>
+      <li>After every DSED, the devices are checked and the case is reviewed within 24 hours.</li>
+    </ul>
+    <div class="vid">
+      <video controls playsinline preload="none" poster="media/qc-team-demo.jpg" src="media/qc-team-demo.mp4"></video>
+      <a class="btn" href="media/qc-team-demo.mp4" target="_blank" rel="noopener">▶ Open quality-indicator demonstration video (4:19, in Chinese)</a>
+      <p class="small">Dialogue in the video is an example only; prompts should follow the actual situation.</p>
+      <p class="src">Source: Hsinchu County Government Fire Bureau. © Hsinchu County Government Fire Bureau. All rights reserved.</p>
+    </div>
+    <div class="note"><span class="eyebrow">Presenter's note</span>
+      <p>Training sets the standard; video review checks that it actually happens on real calls. A specific error found in review becomes the target for focused RCDP retraining.</p>
     </div>
   </section>
 
@@ -421,7 +453,7 @@ footer { font-size: 0.8rem; color: var(--muted); text-align: center; }
     <div class="row"><span class="k">Email</span><a class="val" href="mailto:davie71722@gmail.com" id="emailVal">davie71722@gmail.com</a><button class="copy" type="button" data-copy="davie71722@gmail.com" id="copyEmail">Copy</button></div>
   </section>
 
-  <footer>English companion to the Chinese-language poster. Data period: January 1 – September 28, 2026 (pilot cases from November 2025).</footer>
+  <footer>Training and quality-control videos: © Hsinchu County Government Fire Bureau. All rights reserved. English companion to the Chinese-language poster. Data period: January 1 – September 28, 2026 (pilot cases from November 2025).</footer>
 </main>
 
 <script>
