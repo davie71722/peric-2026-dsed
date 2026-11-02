@@ -1,4 +1,19 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* training section */
+.phases { display: grid; gap: 10px; margin: 12px 0; }
+.phase { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; }
+.phase .tag { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ap); }
+.phase h3 { font-size: 1rem; margin: 2px 0 4px; }
+.phase p, .phase li { font-size: 0.93rem; }
+.phase ul { margin: 4px 0 0; padding-left: 1.1em; }
+.loop { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 2px; }
+.loop span { background: var(--ap-tint); color: var(--fg); border-radius: 999px; padding: 2px 10px; font-size: 0.85rem; font-weight: 500; }
+.std { background: var(--brand); color: var(--on-brand); border-radius: 10px; padding: 12px 14px; font-size: 0.93rem; }
+.std b { font-weight: 600; }
+.vid { margin: 14px 0 6px; }
+.vid video { width: 100%; border-radius: 10px; background: #000; display: block; }
+.vid a.btn { display: inline-block; margin-top: 8px; padding: 8px 14px; border-radius: 8px; background: var(--brand); color: var(--on-brand); text-decoration: none; font-weight: 500; font-size: 0.92rem; }
+</style></head><body>
 <title>Hsinchu AP-First DSED</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -248,7 +263,7 @@ footer { font-size: 0.8rem; color: var(--muted); text-align: center; }
     <p>To describe how Hsinchu County EMS introduced initial AP pads as a bridge to DSED, and whether it is feasible in the field.</p>
     <ul class="list">
       <li>Retrospective implementation analysis. Introduced November 2025; main analysis period January 1 – September 28, 2026.</li>
-      <li>All county EMTs were trained through an instructor-led program. Quality review confirmed that each station's technique met the training standard, with no major errors or breaches of required steps.</li>
+      <li>All county EMTs were trained through an instructor-led program using SBML with RCDP (see <a href="#training">Training</a>). Quality review confirmed that each station's technique met the training standard, with no major errors or breaches of required steps.</li>
       <li>Data: ambulance run reports, Zoll defibrillator records and body-worn camera video.</li>
       <li>DSED technique: two defibrillators, initial energy 200 J each. One stays in its standard AED mode; the other is set to manual mode and charged to 200 J. The same EMT-P presses both shock buttons in rapid sequence, less than 1 second apart.</li>
       <li>Feasibility indicators: ① delivery, ② workflow compatibility, ③ access to a second defibrillator, ④ on-scene decision, ⑤ time cost of AP versus AL pads, ⑥ main barrier.</li>
@@ -303,6 +318,30 @@ footer { font-size: 0.8rem; color: var(--muted); text-align: center; }
     <div class="legend"><span><span class="sw ap"></span>Blue frame: AP pads (front + back)</span><span><span class="sw al"></span>Turquoise: AL pads added for DSED</span></div>
     <div class="note"><span class="eyebrow">Presenter's note</span>
       <p>The blue frames are the pair placed at first contact. The turquoise boxes are where the second set goes when DSED is prepared. Both are on the front and side of the chest, so they can be added with the mCPR device still running.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="training">
+    <span class="eyebrow">How crews were trained</span>
+    <h2 id="training">Training: SBML with RCDP</h2>
+    <p>Before AP pads went into the field, every crew learned the same sequence through simulation-based mastery learning (SBML) with rapid cycle deliberate practice (RCDP). November 2025 – March 2026; 21 stations; 344 field staff (37 EMT-P, 307 EMT-II).</p>
+    <div class="phases">
+      <div class="phase"><span class="tag">Crawl</span><h3>Build the sequence</h3>
+        <ul><li>Peyton's four steps: demonstration, deconstruction, comprehension, performance</li><li>Short videos and cognitive aids</li><li>Practice on live volunteers, not only manikins, to feel the real weight of a roll</li></ul></div>
+      <div class="phase"><span class="tag">Walk</span><h3>RCDP on the steps that interrupt CPR</h3>
+        <ul><li>Module A: front pad placement · Module B: team coordination for the roll or sit-up · Module C: mechanical CPR integration</li><li>13 predefined errors. When one occurs, the instructor stops the scenario at once:</li></ul>
+        <div class="loop"><span>Pause</span><span>→ Fix</span><span>→ Rewind</span><span>→ Retry</span></div></div>
+      <div class="phase"><span class="tag">Run</span><h3>Full OHCA scenarios</h3>
+        <ul><li>Scored with an error checklist and timed compression pauses</li><li>Verified by instructors on site; field use checked with body-worn camera video</li></ul></div>
+    </div>
+    <div class="std"><b>Mastery standard:</b> zero critical errors and an AP-related compression pause under 15 seconds. In simulation, errors fell from about 6 per scenario to 0–1, and the pause from 25 s to under 13 s.</div>
+    <div class="vid">
+      <video controls playsinline preload="none" poster="media/ap-dsed-training.jpg" src="media/ap-dsed-training.mp4"></video>
+      <a class="btn" href="media/ap-dsed-training.mp4" target="_blank" rel="noopener">▶ Open training video (2:33, in Chinese)</a>
+      <p class="small">Hsinchu County Fire Bureau teaching video: AP pads and DSED.</p>
+    </div>
+    <div class="note"><span class="eyebrow">Presenter's note</span>
+      <p>A memo does not change hand movements. RCDP stops the error the moment it happens, so the wrong sequence is never rehearsed again. That is what let us change an old habit across 344 people in a few months.</p>
     </div>
   </section>
 

@@ -1,4 +1,19 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* training section */
+.phases { display: grid; gap: 10px; margin: 12px 0; }
+.phase { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; }
+.phase .tag { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ap); }
+.phase h3 { font-size: 1rem; margin: 2px 0 4px; }
+.phase p, .phase li { font-size: 0.93rem; }
+.phase ul { margin: 4px 0 0; padding-left: 1.1em; }
+.loop { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 2px; }
+.loop span { background: var(--ap-tint); color: var(--fg); border-radius: 999px; padding: 2px 10px; font-size: 0.85rem; font-weight: 500; }
+.std { background: var(--brand); color: var(--on-brand); border-radius: 10px; padding: 12px 14px; font-size: 0.93rem; }
+.std b { font-weight: 600; }
+.vid { margin: 14px 0 6px; }
+.vid video { width: 100%; border-radius: 10px; background: #000; display: block; }
+.vid a.btn { display: inline-block; margin-top: 8px; padding: 8px 14px; border-radius: 8px; background: var(--brand); color: var(--on-brand); text-decoration: none; font-weight: 500; font-size: 0.92rem; }
+</style></head><body>
 <title>新竹前後貼片 DSED</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -250,7 +265,7 @@ footer { font-size: 0.8rem; color: var(--muted); text-align: center; }
     <ul class="list">
       <li>回溯性導入經驗分析；新竹縣 21 分隊，外勤 344 人（EMTP 37 人）。</li>
       <li>2025/11 導入；主要分析期間 2026/1/1–9/28。</li>
-      <li>全縣 EMT 透過教官制度接受教育訓練，並透過品管確認各分隊操作符合訓練要求，無重大操作錯誤或違反必要操作規範的情形。</li>
+      <li>全縣 EMT 透過教官制度，以 SBML 結合 RCDP 接受教育訓練（見<a href="#training">訓練</a>段落），並透過品管確認各分隊操作符合訓練要求，無重大操作錯誤或違反必要操作規範的情形。</li>
       <li>資料：救護紀錄、Zoll 去顫器紀錄、密錄器影像。</li>
       <li>DSED：兩台電擊器初始電擊劑量各為 200 J，一台設定為原本的自動 AED 模式，另一台設定為手動電擊模式充電至 200 J，由同一 EMTP 於間隔小於 1 秒鐘的差距下快速依序按下放電鈕。</li>
       <li>可行性指標：①實際執行、②流程相容、③第二台去顫器可及性、④現場決策、⑤傳統貼片 vs 前後貼片的時間成本、⑥主要障礙。</li>
@@ -305,6 +320,30 @@ footer { font-size: 0.8rem; color: var(--muted); text-align: center; }
     <div class="legend"><span><span class="sw ap"></span>藍框：前後貼片（前胸＋後背）</span><span><span class="sw al"></span>青綠色：DSED 時加貼的傳統貼片</span></div>
     <div class="note"><span class="eyebrow">講者說明</span>
       <p>藍框是接觸病人時就貼上的那一組；青綠色是準備 DSED 時加貼的第二組。兩片都在前胸與側胸，mCPR 照常運作也貼得上去。</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="training">
+    <span class="eyebrow">教育訓練方式</span>
+    <h2 id="training">訓練：SBML 結合 RCDP</h2>
+    <p>前後貼片上線前，全縣以模擬精熟學習（SBML）結合快速循環刻意練習（RCDP），讓每位同仁用同一套動作完成貼片。期間 2025 年 11 月至 2026 年 3 月；21 個分隊、外勤 344 人（EMTP 37 人、EMT-2 307 人）。</p>
+    <div class="phases">
+      <div class="phase"><span class="tag">Crawl 爬</span><h3>建立動作順序</h3>
+        <ul><li>Peyton 四步教學：示範、分解、理解（學員口述）、操作</li><li>短片教學與提示卡</li><li>以真人志願者練習，不只用假人，體會實際翻身的重量</li></ul></div>
+      <div class="phase"><span class="tag">Walk 走</span><h3>針對會中斷 CPR 的步驟進行 RCDP</h3>
+        <ul><li>模組 A：前胸貼片位置 · 模組 B：翻身或扶坐的團隊協調 · 模組 C：與機械式 CPR 整合</li><li>預先定義 13 項錯誤（NG 行為），一出現教官立即喊停：</li></ul>
+        <div class="loop"><span>暫停</span><span>→ 修正</span><span>→ 倒回</span><span>→ 重做</span></div></div>
+      <div class="phase"><span class="tag">Run 跑</span><h3>完整 OHCA 情境演練</h3>
+        <ul><li>以錯誤檢核表評分，並計時壓胸中斷</li><li>教官現場驗收；實際出勤以密錄器影像確認</li></ul></div>
+    </div>
+    <div class="std"><b>通過標準：</b>零重大錯誤，且貼後背造成的壓胸中斷小於 15 秒。模擬訓練中，每場景錯誤由約 6 次降至 0–1 次，中斷時間由 25 秒降至 13 秒以下。</div>
+    <div class="vid">
+      <video controls playsinline preload="none" poster="media/ap-dsed-training.jpg" src="media/ap-dsed-training.mp4"></video>
+      <a class="btn" href="media/ap-dsed-training.mp4" target="_blank" rel="noopener">▶ 開啟教學影片（2:33）</a>
+      <p class="small">新竹縣政府消防局前後貼片及 DSED 教學影片。</p>
+    </div>
+    <div class="note"><span class="eyebrow">講者說明</span>
+      <p>公文改變不了手上的動作。RCDP 在錯誤發生的當下就喊停，錯的順序不會再被重複練習。這是我們能在幾個月內，讓 344 人改掉舊習慣的關鍵。</p>
     </div>
   </section>
 
